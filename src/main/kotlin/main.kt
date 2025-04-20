@@ -6,8 +6,8 @@ fun agoToText(seconds: Int): String {
     val tobe = "Собеседник был(а)"
     val minutes = seconds/60
     val hours = seconds/360
-    val mins=minCorrect(minutes)
-    val hrs=hourCorrect(hours)
+    val mins = minCorrect(minutes)
+    val hrs = hourCorrect(hours)
 
     val text=when (seconds) {
         in 0..60 -> "$tobe только что"
@@ -31,7 +31,7 @@ fun minCorrect(minutes:Int): String{
 
 fun hourCorrect(hours:Int): String{
     val hourEnding=when (hours){
-        1,21 -> "час"
+        1, 21 -> "час"
         2, 3, 4, 22, 23, 24 -> "часа"
         else -> "часов"
     }
